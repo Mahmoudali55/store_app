@@ -28,7 +28,12 @@ class Api {
       headers: headers,
     );
     print(response.body);
-    Map<String, dynamic> data = jsonDecode(response.body);
-    return data;
+    if (response == 200) {
+      Map<String, dynamic> data = jsonDecode(response.body);
+      return data;
+    } else {
+      throw Exception(
+          'there is a Product with status code ${response.statusCode}with body ${response.body}');
+    }
   }
 }
