@@ -8,7 +8,7 @@ class GetAllProductsService {
 
     List<ProductModel> productsList = [];
     for (int i = 0; i < data.length; i++) {
-      productsList.add(ProductModel.formJson(data[i]));
+      productsList.add(ProductModel.fromJson(data[i]));
     }
     return productsList;
   }

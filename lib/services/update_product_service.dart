@@ -18,6 +18,6 @@ class UpdateProduct {
         'category': category
       },
     );
-    return ProductModel.formJson(data);
+    return ProductModel.fromJson(data);
   }
 }
